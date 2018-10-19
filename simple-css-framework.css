@@ -135,15 +135,12 @@ ol{
 }
 a{
 	text-decoration:none;
+	color:blue;
 	border-bottom:1px solid blue;
 }
 a:hover{
 	color:purple;
 	border-bottom:1px solid purple;
-}
-a:visited{
-	color:darkblue;
-	border-bottom:1px solid darkblue;
 }
 a:focus,a:active{
 	background:lightyellow;
