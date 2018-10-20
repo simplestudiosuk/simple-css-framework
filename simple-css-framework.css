@@ -88,9 +88,10 @@ table {
 */
 *{
 	box-sizing:border-box;
+	font-family:'Open Sans', sans-serif;
 }
 body{
-	font-family:'Open Sans', monospace;
+	font-family:'Open Sans', sans-serif;
 	font-size:1em;
 	line-height:1.45;
 	-webkit-font-smoothing: antialiased;
@@ -105,7 +106,7 @@ body{
 */
 h1,h2,h3,h4,h5,h6{
 	font-weight:700;
-	margin-bottom:12px;
+	padding:24px 0px 12px 0px;
 }
 h1{
 	font-size:2.8em;
@@ -145,3 +146,193 @@ a:hover{
 a:focus,a:active{
 	background:lightyellow;
 }
+strong{
+	font-weight:700;
+}
+em{
+	font-style:italic;
+}
+
+/*
+	4. Tables
+*/
+table{
+	margin:24px 0px 12px 0px;
+	border:1px solid #ccc;
+}
+thead{
+	background:#eee;
+	border-bottom:1px solid #ccc;
+}
+tr:nth-child(even){
+	background:#f1f2f2;
+}
+th{
+	font-weight:700;
+	padding:10px;
+	text-align:left;
+	border-right:1px solid #ccc;
+}
+th:last-child{
+	border-right:none;
+}
+td{
+	padding:10px;
+	border-right:1px solid #eee;
+}
+td:last-child{
+	border-right:none;
+}
+td.align-right{
+	text-align:right;
+}
+
+/*
+	5. Forms and Buttons
+*/
+form{
+	max-width:60em;
+}
+fieldset{
+	margin:24px 0px 12px 0px;
+	padding:24px;
+	border:1px solid #ccc;
+}
+fieldset legend{
+	background:#fff;
+	padding:0 12px;
+	margin-left:-12px;
+	font-weight:700;
+}
+label{
+	width:100%;
+	display:block;
+	margin-bottom:12px;
+	max-width:300px;
+}
+label span{
+	float:right;
+	font-size:80%;
+	color:#880000;
+}
+input,textarea{
+	margin-bottom:24px;
+	min-width:300px;
+	border:1px solid #ccc;
+	padding:6px;
+	font-size:1em;
+}
+textarea{
+	display:block;
+	font-size:1em;
+}
+select{
+	min-width:300px;
+	display:block;
+	margin-bottom:24px;
+}
+input:focus,textarea:focus{
+	background:lightyellow;
+}
+.button{
+	text-decoration: none;
+	background:#ccc;
+	color:#000;
+	min-width:auto;
+	padding:10px 20px;
+	border-radius:3px;
+	border:2px solid #ccc;
+	display:inline-block;
+	cursor:pointer;
+	margin-right:12px;
+}
+.button:hover{
+	background:#999;
+	border:2px solid #999;
+	color:#fff;
+}
+.button.outline{
+	border:2px solid #ccc;
+	background:#ccc;
+	background:transparent;
+}
+.button.outline:hover{
+	background:#ccc;
+	color:#fff;
+}
+input.button{
+	margin-bottom:0px;
+}
+.button.smaller{
+	font-size:90%;
+	padding:8px 16px;
+}
+.button.smallest{
+	font-size:80%;
+	padding:6px 12px;
+}
+.button.bigger{
+	font-size:120%;
+	padding:12px 24px;
+}
+.button.biggest{
+	font-size:140%;
+	padding:14px 28px;
+}
+.alert{
+	border-top:2px solid #ccc;
+	border-bottom:2px solid #ccc;
+	background:#eee;
+	padding:24px 12px;
+	width:100%;
+	font-weight:700;
+}
+.alert span{
+	float:right;
+	display:inline-block;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.4em;
+	text-align:center;
+	font-weight:700;
+	border-radius:50%;
+	background:rgba(255,255,255,0.6);
+	cursor:pointer;
+}
+.alert.success{
+	border-top:2px solid #75a000;
+	border-bottom:2px solid #75a000;
+	background:#dfedb7;
+	color:#75a000;	
+}
+.alert.success span:hover{
+	color:#fff;
+	background:#75a000;
+}
+.alert.warning{
+	border-top:2px solid #ddb300;
+	border-bottom:2px solid #ddb300;
+	background:#fff0b0;
+	color:#ddb300;	
+}
+.alert.warning span:hover{
+	color:#fff;
+	background:#ddb300;
+}
+.alert.error{
+	border-top:2px solid #c10000;
+	border-bottom:2px solid #c10000;
+	background:#ffcaca;
+	color:#c10000;
+}
+.alert.error span:hover{
+	color:#fff;
+	background:#c10000;
+}
+/*
+	6. Layout
+*/
+
+/*
+	7. Menus
+*/
