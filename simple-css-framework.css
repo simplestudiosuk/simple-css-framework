@@ -99,7 +99,11 @@ table {
 	--alert-error-alt: #ffcaca;
 	--alert-warning: #ddb300;
 	--alert-warning-alt: #fff0b0;
-	--default-radius: 3px;
+	--default-radius: 2px;
+	--half-line: 0.7rem;
+	--single-line: 1.4rem;
+	--double-line: 2.8rem;
+	--triple-line: 4.2rem;
 }
 *{
 	box-sizing:border-box;
@@ -122,7 +126,7 @@ body{
 */
 h1,h2,h3,h4,h5,h6{
 	font-weight:700;
-	padding:24px 0px 12px 0px;
+	line-height:var(--triple-line);
 	color:var(--primary-colour);
 }
 h1{
@@ -143,6 +147,8 @@ p{
 	margin-bottom:12px;
 	max-width:60em;
 	color:var(--primary-colour);
+	line-height:var(--single-line);
+	margin-bottom:var(--single-line);
 }
 ul{
 	margin-bottom:12px;
@@ -195,19 +201,19 @@ em{
 	4. Tables
 */
 table{
-	margin:24px 0px 12px 0px;
+	margin:calc(var(--double-line) - 1px) 0;
 	border:1px solid var(--primary-colour);
 }
 thead{
 	background:var(--primary-colour);
-	border-bottom:1px solid var(--primary-colour);
 }
 tr:nth-child(even){
 	background: var(--light-neutral);
 }
 th{
 	font-weight:700;
-	padding:10px;
+	line-height:var(--double-line);
+	padding:0 var(--single-line);
 	text-align:left;
 	border-right:1px solid var(--primary-colour-alt);
 	color:#fff;
@@ -216,7 +222,8 @@ th:last-child{
 	border-right:none;
 }
 td{
-	padding:10px;
+	line-height:var(--double-line);
+	padding:0 var(--single-line);
 	border-right:1px solid  var(--primary-colour-alt);
 }
 td:last-child{
@@ -233,21 +240,21 @@ form{
 	max-width:60em;
 }
 fieldset{
-	margin:24px 0px 12px 0px;
+	margin:var(--single-line) 0px;
 	padding:24px;
 	border:1px solid var(--primary-colour);
 	border-radius:var(--default-radius);
 }
 fieldset legend{
 	background: var(--main-bg-colour);
-	padding:0 12px;
-	margin-left:-12px;
+	padding:0 var(--single-line);
+	margin-left:-var(--single-line);
 	font-weight:700;
 }
 label{
 	width:100%;
 	display:block;
-	margin-bottom:12px;
+	margin-bottom:var(--single-line);
 	color: var(--primary-colour);
 }
 label span{
@@ -256,7 +263,7 @@ label span{
 	color: var(--alert-error);
 }
 input,textarea{
-	margin-bottom:24px;
+	margin-bottom:var(--double-line);
 	min-width:300px;
 	border:1px solid var(--primary-colour);
 	padding:6px;
@@ -271,7 +278,7 @@ textarea{
 select{
 	min-width:300px;
 	display:block;
-	margin-bottom:24px;
+	margin-bottom:var(--double-line);
 }
 input:focus,textarea:focus{
 	background:lightyellow;
@@ -281,26 +288,69 @@ input:focus,textarea:focus{
 	background: var(--primary-colour);
 	color: var(--main-bg-colour);
 	min-width:auto;
-	padding:10px 20px;
+	padding:0 var(--single-line);
+	line-height:calc(var(--double-line) - 4px);
 	border-radius:var(--default-radius);
 	border:2px solid var(--primary-colour);
 	display:inline-block;
 	cursor:pointer;
-	margin-right:12px;
+	margin-right:var(--double-line);
+	margin-bottom:var(--single-line);
 }
-.button:hover{
-	background: var(--secondary-colour);
-	border:2px solid var(--secondary-colour);
+.button.primary{
+	background: var(--primary-colour);
 	color: var(--main-bg-colour);
 }
-.button.outline{
+.button.primary.outline{
 	border:2px solid var(--primary-colour);
 	color: var(--primary-colour);
 	background:transparent;
 }
-.button.outline:hover{
+.button.secondary{
+	background: var(--secondary-colour);
+	border:2px solid var(--secondary-colour);
+	color: var(--main-bg-colour);
+}
+.button.secondary.outline{
 	border:2px solid var(--secondary-colour);
 	color: var(--secondary-colour);
+	background:transparent;
+}
+.button.alert-success{
+	border:2px solid var(--alert-success);
+	background: var(--alert-success);
+	color: var(--main-bg-colour);
+}
+.button.alert-warning{
+	border:2px solid var(--alert-warning);
+	background: var(--alert-warning);
+	color: var(--main-bg-colour);	
+}
+.button.alert-error{
+	border:2px solid var(--alert-error);
+	background: var(--alert-error);
+	color: var(--main-bg-colour);
+}
+.button:hover{
+	background: var(--light-neutral);
+	border:2px solid var(--secondary-colour);
+	color: var(--main-primary-colour);
+}
+.button.primary.outline:hover{
+	border:2px solid var(--secondary-colour);
+	color: var(--secondary-colour);
+}
+.button.secondary.outline:hover{
+	border:2px solid var(--primary-colour);
+	color: var(--primary-colour);
+}
+.button.alert-success:hover,.button.alert-warning:hover,.button.alert-error:hover{
+	background:var(--primary-colour);
+	border:2px solid var(--primary-colour);
+	color:var(--main-bg-colour);
+}
+.button.all-caps{
+	text-transform: uppercase;
 }
 input.button{
 	margin-bottom:0px;
